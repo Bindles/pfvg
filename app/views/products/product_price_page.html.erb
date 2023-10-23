@@ -1,0 +1,17 @@
+<!-- product_price_page.html.erb -->
+<h1>Get Product Price by Entity ID</h1>
+
+<%= form_tag(product_price_path, method: :post) do %>
+  <label for="entity_id">Entity ID:</label>
+  <%= text_field_tag(:entity_id, nil, required: true) %>
+  <%= submit_tag('Fetch Price') %>
+<% end %>
+hi
+<% if @product_price %>
+hii
+  <p><%= @product_name %></p>
+  <h2>Product Price:</h2>
+  <p><%= @product_price %></p>
+  <p><%= @product_retailprice %></p>
+
+<% end %>
