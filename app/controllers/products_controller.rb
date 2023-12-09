@@ -29,7 +29,7 @@ class ProductsController < ApplicationController
       }
     GRAPHQL
 
-    authorization_token = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJjaWQiOjEsImNvcnMiOlsiaHR0cHM6Ly93d3cuZWNpZ21hZmlhLmNvbSJdLCJlYXQiOjE2OTgwNTgwODEsImlhdCI6MTY5Nzg4NTI4MSwiaXNzIjoiQkMiLCJzaWQiOjk5OTcwNTkzOCwic3ViIjoiYmNhcHAubGlua2VyZCIsInN1Yl90eXBlIjowLCJ0b2tlbl90eXBlIjoxfQ.3Okb2lxU2zvPAfyK9TyOgtJiuL_ZHYu2VwJ6KZRjgzRsCBAGPutVCKumxM5dPMlfyjWXzVDSAiq3598jrBMulw'
+    authorization_token = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJjaWQiOjEsImNvcnMiOlsiaHR0cHM6Ly93d3cuZWNpZ21hZmlhLmNvbSJdLCJlYXQiOjE2OTgyMzA2OTMsImlhdCI6MTY5ODA1Nzg5MywiaXNzIjoiQkMiLCJzaWQiOjk5OTcwNTkzOCwic3ViIjoiYmNhcHAubGlua2VyZCIsInN1Yl90eXBlIjowLCJ0b2tlbl90eXBlIjoxfQ.cY55gRQfc89_xRCTl0tN3UUvGvUh2nN3suaNEWjrzQDEWxVUDTyvEQL8NeCISKPKXroMchizPUMpCUA_z1cHlg'
 
     response = HTTParty.post('https://ecigmafia.com/graphql', body: { query: graphql_query }.to_json, headers: { 'Authorization' => authorization_token, 'Content-Type' => 'application/json' })
 
